@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .font-anton {
+    font-family: 'Anton', Impact, system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-spacing {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+
+  .hero-gradient {
+    background: radial-gradient(120% 120% at 0% 0%, #EEF96A 0%, #F0F2FA 38%, #9C88E9 76%);
+  }
+
+  .btn-primary {
+    @apply bg-brand-purple text-white hover:brightness-95 active:translate-y-[1px] shadow-float rounded-full px-6 py-3 text-[15px] font-medium transition-all focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:outline-none;
+  }
+
+  .btn-secondary {
+    @apply border border-brand-purple text-brand-purple hover:bg-brand-purple/10 rounded-full px-6 py-3 text-[15px] font-medium transition-all focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:outline-none;
+  }
+
+  .badge {
+    @apply bg-brand-lime text-brand-purple px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide inline-block;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-soft;
+  }
+
+  .section-title {
+    @apply font-anton uppercase text-brand-purpleDark tracking-tight;
+  }
+}
+
+@layer utilities {
+  .py-18 {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
